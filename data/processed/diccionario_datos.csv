@@ -1,0 +1,20 @@
+variable,naturaleza,descripcion,origen
+id_titulo,texto,Identificador único (formato + show_id de origen),Derivada
+formato,categórica,Película o Serie,Ambas fuentes
+titulo,texto,Nombre del contenido,Ambas fuentes
+anio,temporal,Año de estreno (2010–2025),release_year
+fecha_referencia,temporal,Fecha dentro del año de estreno. NO es la fecha de alta en catálogo,date_added
+pais_principal,categórica,Primer país listado en la coproducción,country
+idioma_original,categórica,Código ISO del idioma original,language
+bloque_idioma,categórica,Inglés / No inglés,Derivada
+genero_principal,categórica,Primer género declarado,genres
+segmento,categórica,Formato × bloque de idioma: unidad de decisión presupuestaria,Derivada
+atencion,cuantitativa continua,Índice de popularidad (proxy de interés/engagement),popularity
+interacciones,cuantitativa discreta,Nº de calificaciones emitidas por la audiencia,vote_count
+satisfaccion,cuantitativa continua,Nota media 0–10. Nula si no hay interacciones,vote_average
+sin_senal,booleana,True si el título no registra ninguna interacción,Derivada
+budget,cuantitativa continua,Presupuesto en USD. Sólo películas. 0 → nulo,budget
+revenue,cuantitativa continua,Recaudación en USD. Sólo películas. 0 → nulo,revenue
+roi,cuantitativa continua,"revenue / budget. 1,0 = punto de equilibrio",Derivada
+cohorte_madura,booleana,True para 2010–2024. 2025 se excluye de tendencias,Derivada
+muestra_balanceada,booleana,Marca que el conjunto tiene 1.000 títulos por año por diseño,Derivada

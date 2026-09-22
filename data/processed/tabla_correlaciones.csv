@@ -1,0 +1,6 @@
+index,budget,revenue,atencion,interacciones,satisfaccion
+budget,1.0,0.71,0.56,0.59,0.06
+revenue,0.71,1.0,0.62,0.69,0.25
+atencion,0.56,0.62,1.0,0.72,0.29
+interacciones,0.59,0.69,0.72,1.0,0.27
+satisfaccion,0.06,0.25,0.29,0.27,1.0

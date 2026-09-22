@@ -1,0 +1,25 @@
+# StreamView Analytics · EP1 ADY1104 Visualización de Datos
+# Versiones con las que se desarrolló y verificó el proyecto (Python 3.12).
+# Instalación:  pip install -r requirements.txt
+
+pandas>=2.2,<3.1
+numpy>=1.26
+scipy>=1.11            # correlación de Spearman
+matplotlib>=3.8        # figuras estáticas del informe
+plotly>=5.20           # gráficos interactivos del dashboard
+streamlit>=1.49        # dashboard (usa la API `width="stretch"`)
+nbformat>=5.9          # construcción del cuaderno
+jupyter>=1.0           # ejecución del cuaderno (opcional)
+
+# NOTA DE COMPATIBILIDAD
+# Con pandas 3.x el tipo de texto respaldado por PyArrow provoca una falla de
+# segmentación al construir DataFrames dentro del hilo de trabajo que Streamlit
+# crea en cada re-ejecución, es decir, cada vez que se mueve un filtro.
+# `src/config.py` desactiva ese backend con `pd.options.future.infer_string`
+# antes de crear cualquier DataFrame, de modo que el dashboard funciona tanto
+# con pandas 2.x como con 3.x. Por la misma razón las tablas del dashboard se
+# renderizan como HTML en lugar de `st.dataframe`, que convierte a Apache Arrow.
+#
+# La exportación de los PDF usa Google Chrome en modo headless. Si no está
+# instalado, `src/documentos.py` deja igualmente los archivos HTML en docs/,
+# que pueden imprimirse a PDF desde cualquier navegador.

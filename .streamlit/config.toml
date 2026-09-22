@@ -1,0 +1,18 @@
+# Tema del dashboard — replica la identidad visual del informe y del resumen
+# ejecutivo (IE9: coherencia entre visualizaciones, propósito y audiencia).
+# El color primario NO puede ser rojo: el rojo está reservado en este proyecto
+# para señalar estado crítico y no debe usarse en controles de interfaz.
+
+[theme]
+base = "light"
+primaryColor = "#2a78d6"
+backgroundColor = "#f9f9f7"
+secondaryBackgroundColor = "#fcfcfb"
+textColor = "#0b0b0b"
+font = "sans serif"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
